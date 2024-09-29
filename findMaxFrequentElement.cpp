@@ -3,11 +3,11 @@
 #include <unordered_map>
 using namespace std;
 
-char findMaxFrequentElement(vector<int> &nums)
+int findMaxFrequentElement(vector<int> &nums)
 {
     unordered_map<int, int> countMap;
     int maxCount = 0;
-    char maxElement = '0';
+    int maxElement = 0;
     for (int num : nums)
     {
         countMap[num]++;
@@ -17,4 +17,5 @@ char findMaxFrequentElement(vector<int> &nums)
             maxElement = num;
         }
     }
+    return maxElement;
 }
